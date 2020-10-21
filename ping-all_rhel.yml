@@ -1,0 +1,9 @@
+---
+- name: Pinging all RHEL servers
+  hosts: all
+  remote_user: ansible.linux
+  
+  tasks:
+  - name: Testing connection
+    ping:
+...
