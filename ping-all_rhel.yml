@@ -1,6 +1,6 @@
 ---
 - name: Pinging all RHEL servers
-  hosts: all
+  hosts: rhel
   remote_user: ansible.linux
   
   tasks:

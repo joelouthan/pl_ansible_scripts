@@ -1,7 +1,7 @@
 ---
 - name: Ping All Windows Servers
-  hosts: all
-  
+  hosts: windows
+
   tasks:
   - name: Test connection
     win_ping:

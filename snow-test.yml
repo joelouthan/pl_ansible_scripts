@@ -1,0 +1,17 @@
+---
+  - hosts: testhost
+    roles:
+      - php
+      - nginx
+    environment:
+      http_proxy: http://plproxy.pacificlife.net:8080
+
+  - name: Grab a user record
+    snow_record:
+      username: ansible_test
+      password: my_password
+      instance: dev99999
+      state: present
+      number: 62826bf03710200044e0bfc8bcbe5df1
+      table: sys_user
+      lookup_field: sys_id
