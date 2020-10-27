@@ -1,6 +1,6 @@
 ---
 # proxy environments
-proxy_env: http://plproxy.pacificlife.net:8080
+pl_proxy: http://plproxy.pacificlife.net:8080
 
 # snow_record variables
 sn_username: Prod.SplunkRest@pacificlife.com
