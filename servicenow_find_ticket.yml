@@ -11,6 +11,9 @@
       name: servicenow
       tasks_from: find_ticket
     vars:
+      sn_username: "{{ pl_snow_username }}"
+      sn_password: "{{ pl_snow_password }}"
+      sn_instance: "{{ pl_snow_instance }}"
       
   - name: Search for incident assigned to group, return specific fields
     snow_record_find:
