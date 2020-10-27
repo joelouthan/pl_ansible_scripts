@@ -6,8 +6,9 @@
     instance: "{{ sn_instance }}"
     table: incident
     query:
-      assignment_group: d625dccec0a8016700a222a0f7900d06
+      assignment_group: f32ae02b1be10cd0532d6288bd4bcb13
     return_fields:
-      - number
-      - opened_at
+    - number
+    - opened_at
+    - short_description
 ...
