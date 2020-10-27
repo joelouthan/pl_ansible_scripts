@@ -1,6 +1,6 @@
 ---
 - name: Grab a user record
-  snow_record:
+  snow_record_find:
     username: "{{ sn_username }}"
     password: "{{ sn_password }}"
     instance: "{{ sn_instance }}"
