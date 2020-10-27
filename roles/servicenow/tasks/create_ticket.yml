@@ -1,0 +1,27 @@
+---
+- name: Create ticket with notes
+  hosts: localhost
+  connection: local
+  include_role: servicenow
+  # This is an example of using roles. See roles/servicenow for structure
+  # To generate this role, run `ansible-galaxy init roles/name_of_your_role`
+  environment:
+    http_proxy: "{{ proxy_env }}"
+    https_proxy: "{{ proxy_env }}"
+
+  tasks:
+  - name: Create a change request
+    snow_record:
+      state: present
+      table: change_request
+      username: "{{ sn_username }}"
+      password: "{{ sn_password }}"
+      instance: "{{ sn_instance }}"
+      data:
+        severity: "{{ sn_severity }}"
+        priority: "{{ sn_priority }}"
+        short_description: "This is a test opened by Ansible"
+    register: new_incident
+
+  - debug: 
+      var: new_incident.record
