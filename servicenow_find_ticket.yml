@@ -6,6 +6,12 @@
     https_proxy: http://plproxy.pacificlife.net:8080
 
   tasks:
+  - name: Include servicenow role
+    include_role: 
+      name: servicenow
+      tasks_from: find_ticket
+    vars:
+      
   - name: Search for incident assigned to group, return specific fields
     snow_record_find:
       username: Prod.SplunkRest@pacificlife.com
