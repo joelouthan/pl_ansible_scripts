@@ -23,4 +23,7 @@
       return_fields:
       - number
       - opened_at
+    register: pysnow
+
+  - debug: "{{ pysnow.stdout }}"
 ...
