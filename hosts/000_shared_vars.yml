@@ -1,3 +1,7 @@
+pl_proxy:
+    http_proxy: http://plproxy.pacificlife.net:8080
+    https_proxy: http://plproxy.pacificlife.net:8080
+
 pl_snow_username: Prod.SplunkRest@pacificlife.com
 pl_snow_password: !vault |
         $ANSIBLE_VAULT;1.1;AES256
