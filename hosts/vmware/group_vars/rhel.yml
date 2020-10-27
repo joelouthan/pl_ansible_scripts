@@ -1,5 +1,4 @@
 ansible_user: ansible.linux
-#ansible_rhel_user: ansible.linux
 ansible_rhel_password: !vault |
   $ANSIBLE_VAULT;1.1;AES256
   38343365613261346532613331383533643062643165333762366662643334343439666633306634
