@@ -1,15 +1,26 @@
 ---
 - hosts: localhost
   connection: local
-  environment: "{{ pl_proxy }}"
+  environment:
+    http_proxy: http://plproxy.pacificlife.net:8080
+    https_proxy: http://plproxy.pacificlife.net:8080
 
   tasks:
-  - name: Include servicenow role
-    include_role: 
-      name: servicenow
-      tasks_from: find_ticket
-    vars:
-      sn_username: "{{ pl_snow_username }}"
-      sn_password: "{{ pl_snow_password }}"
-      sn_instance: "{{ pl_snow_instance }}"
+  - name: ServiceNow - Find a ticket
+    snow_record_find:
+      username: Prod.SplunkRest@pacificlife.com
+      password: !vault |
+        $ANSIBLE_VAULT;1.1;AES256
+        31363765353330343739646363333039633664313834303666626163363835356238633639323433
+        3166353035616265373231386139386138363830363439620a643831633663663233383839363231
+        39333239386262323232333732376561616130663832633131626239343533336231356438633430
+        6261663031333031320a373831613731323339303766643366663863653532353932613162333133
+        35383839386635666237653635366563323239313661343431386236323661396566
+      instance: paclifedev
+      table: incident
+      query:
+        assignment_group: d625dccec0a8016700a222a0f7900d06
+      return_fields:
+      - number
+      - opened_at
 ...
