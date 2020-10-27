@@ -1,3 +1,15 @@
 ---
+- hosts: localhost
+  connection: local
+  environment: "{{ pl_proxy }}"
 
+  tasks:
+  - name: Include servicenow role
+    include_role: 
+      name: servicenow
+      tasks_from: find_ticket
+    vars:
+      sn_username: "{{ pl_snow_username }}"
+      sn_password: "{{ pl_snow_password }}"
+      sn_instance: "{{ pl_snow_instance }}"
 ...
