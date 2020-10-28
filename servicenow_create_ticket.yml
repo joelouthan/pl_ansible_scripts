@@ -1,5 +1,5 @@
 ---
-- name: Create ticket with notes
+- name: ServiceNow - Create Ticket
   hosts: localhost
   connection: local
   include_role: servicenow
