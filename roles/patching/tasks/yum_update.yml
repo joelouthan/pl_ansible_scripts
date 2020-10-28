@@ -1,10 +1,11 @@
 ---
 - name: Updating all packages
-  dnf:
+  yum:
     name: '*'
     state: latest
   become: yes
   become_method: sudo
-  become_user: root
-  become_flags: '-i'
+  register: yumerror
+
+- debug: "{{ yumerror.stdout }}"
 ...
