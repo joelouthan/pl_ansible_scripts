@@ -1,10 +1,10 @@
 ---
-- name: yum update servers (no reboots)
+- name: "yum update servers (WILL REBOOT)"
   hosts: rhel
   any_errors_fatal: false
 
   tasks:
-  - name: Call on patching role and run yum_update (will not reboot)
+  - name: "Call on patching role and run yum_update (WITH REBOOTS)"
     include_role: 
       name: patching
       tasks_from:
