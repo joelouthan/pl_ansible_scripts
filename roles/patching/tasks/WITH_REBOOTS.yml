@@ -1,4 +1,4 @@
 ---
-  - name: REBOOTING
-    reboot:
+- name: REBOOTING
+  reboot:
 ...
