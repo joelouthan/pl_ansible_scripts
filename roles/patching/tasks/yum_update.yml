@@ -4,7 +4,7 @@
     name: '*'
     state: latest
     use_backend: yum
-  become: yes
-  become_method: sudo
-  become_exe: "sudo su - /bin/bash -c"
+  #become: yes
+  #become_method: sudo
+  #become_exe: "sudo su - /bin/bash -c"
 ...
