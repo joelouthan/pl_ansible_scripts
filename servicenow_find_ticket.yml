@@ -1,5 +1,6 @@
 ---
-- hosts: localhost
+- name: ServiceNow - Find Ticket
+  hosts: localhost
   connection: local
   environment: "{{ pl_proxy }}"
 
