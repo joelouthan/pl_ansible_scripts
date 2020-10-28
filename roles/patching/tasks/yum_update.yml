@@ -1,9 +1,8 @@
 ---
 - name: Updating all packages
-  yum:
+  dnf:
     name: '*'
     state: latest
-    use_backend: dnf
   become: yes
   become_method: sudo
   become_user: root
