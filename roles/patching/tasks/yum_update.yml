@@ -6,8 +6,5 @@
     use_backend: yum
   become: yes
   become_method: sudo
-  register: yumerror
-
-- debug:
-    var: yumerror.stdout_lines
+  debugger: on_failed
 ...
