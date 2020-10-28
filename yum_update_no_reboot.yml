@@ -1,7 +1,7 @@
 ---
 - name: Do a yum update (no reboots)
   hosts: rhel
-  become_exe: 'sudo su -'
+  become_exe: "sudo su -"
 
   #'any_errors_fatal: false' This is a bit redundant because it is set to default in
   # Ansible. Essentially, by default, do not stop the playbook if it fails on one. If this is set to true, it will stop on one error.
