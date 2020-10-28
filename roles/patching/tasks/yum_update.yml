@@ -6,4 +6,7 @@
     use_backend: yum
   become: yes
   become_method: sudo
+  register: moduleerr
+
+- debug: var=moduleerr.stdout_lines
 ...
