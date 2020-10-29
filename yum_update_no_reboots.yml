@@ -8,4 +8,6 @@
     include_role: 
       name: patching
       tasks_from: yum_update
+    become: true
+    become_method: sudo
 ...
