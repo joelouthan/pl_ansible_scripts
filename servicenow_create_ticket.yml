@@ -3,6 +3,7 @@
   hosts: localhost
   connection: local
   environment: "{{ pl_proxy }}"
+  gather_facts: true
 
   tasks:
   - name: Include servicenow role and create_ticket task
