@@ -9,9 +9,5 @@
     data:
       severity: "{{ sn_severity }}"
       priority: "{{ sn_priority }}"
-      short_description: "This is a test opened by Ansible"
-  register: new_incident
-  
-- debug: 
-    var: new_incident.record
+      short_description: "This is a test opened by Ansible {{ ansible_date_time.iso8601 }}"
 ...
