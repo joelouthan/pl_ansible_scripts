@@ -3,7 +3,6 @@
   dnf:
     name: '*'
     state: latest
-    use_backend: yum
 #  become: true
 #  become_method: sudo
 #  become_exe: "sudo su - /bin/bash -c"
