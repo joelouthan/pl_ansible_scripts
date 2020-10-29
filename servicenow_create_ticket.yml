@@ -2,25 +2,15 @@
 - name: ServiceNow - Create Ticket
   hosts: localhost
   connection: local
-  include_role: servicenow
-  # This is an example of using roles. See roles/servicenow for structure
-  # To generate this role, run `ansible-galaxy init roles/name_of_your_role`
   environment: "{{ pl_proxy }}"
 
   tasks:
-  - name: Create a change request
-    snow_record:
-      state: present
-      table: change_request
-      username: "{{ sn_username }}"
-      password: "{{ sn_password }}"
-      instance: "{{ sn_instance }}"
-      data:
-        severity: "{{ sn_severity }}"
-        priority: "{{ sn_priority }}"
-        short_description: "This is a test opened by Ansible"
-    register: new_incident
-
-  - debug: 
-      var: new_incident.record
+  - name: Include servicenow role and create_ticket task
+    include_role: 
+      name: servicenow
+      tasks_from: create_ticket
+    vars:
+      sn_username: "{{ pl_snow_username }}"
+      sn_password: "{{ pl_snow_password }}"
+      sn_instance: "{{ pl_snow_instance }}"
 ...
