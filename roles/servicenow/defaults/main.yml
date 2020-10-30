@@ -4,7 +4,14 @@ sn_username: username
 sn_password: password
 sn_instance: paclifedev
 
-#data variables
+# snow ticket variables
+sn_assignment_group: f32ae02b1be10cd0532d6288bd4bcb13
+sn_caller: fbc56bb04fa57b004070a4ce0210c7b1
+sn_contact: fbc56bb04fa57b004070a4ce0210c7b1
+sn_category: Software
+sn_contact_type: email
 sn_severity: 2
 sn_priority: 2
+sn_impact: 2
+sn_urgency: 2
 ...
