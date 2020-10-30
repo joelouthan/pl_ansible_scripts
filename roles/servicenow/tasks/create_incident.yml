@@ -1,5 +1,5 @@
 ---
-- name: Create a change request
+- name: Create a incident ticket
   snow_record:
     username: "{{ sn_username }}"
     password: "{{ sn_password }}"
@@ -13,7 +13,7 @@
       caller: "{{ sn_caller }}"
       contact: "{{ sn_contact }}"
       category: "{{ sn_category }}"
-      contact_type: "{{ contact_type }}"
+      contact_type: "{{ sn_contact_type }}"
       severity: "{{ sn_severity }}"
       priority: "{{ sn_priority }}"
       impact: "{{ sn_impact }}"
