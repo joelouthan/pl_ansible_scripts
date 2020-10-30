@@ -1,8 +1,4 @@
 ---
 - name: REBOOTING
   reboot:
-  become: yes
-  become_method: sudo
-  become_user: root
-  become_flags: '-i'
 ...
