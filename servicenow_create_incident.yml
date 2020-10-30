@@ -1,15 +1,15 @@
 ---
-- name: ServiceNow - Create Ticket
+- name: ServiceNow - Create Incident
   hosts: localhost
   connection: local
   environment: "{{ pl_proxy }}"
   gather_facts: true
 
   tasks:
-  - name: Include servicenow role and create_ticket task
+  - name: Include servicenow role and create_incident task
     include_role: 
       name: servicenow
-      tasks_from: create_ticket
+      tasks_from: create_incident
     vars:
       sn_username: "{{ pl_snow_username }}"
       sn_password: "{{ pl_snow_password }}"
