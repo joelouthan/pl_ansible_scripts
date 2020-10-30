@@ -9,14 +9,14 @@
     # Default: table is incident for type of ticket
     # Change to "change", etc. if you want another type 
     data:
-      assignment_group: "{{ sn_assignment_group }}"
-      caller: "{{ sn_caller }}"
-      contact: "{{ sn_contact }}"
-      category: "{{ sn_category }}"
-      contact_type: "{{ sn_contact_type }}"
+#      assignment_group: "{{ sn_assignment_group }}"
+#      caller: "{{ sn_caller }}"
+#      contact: "{{ sn_contact }}"
+#      category: "{{ sn_category }}"
+#      contact_type: "{{ sn_contact_type }}"
       severity: "{{ sn_severity }}"
       priority: "{{ sn_priority }}"
-      impact: "{{ sn_impact }}"
-      urgency: "{{ sn_urgency }}"
+#      impact: "{{ sn_impact }}"
+#      urgency: "{{ sn_urgency }}"
       short_description: "Test incident opened by Ansible {{ ansible_date_time.iso8601 }}"
 ...
