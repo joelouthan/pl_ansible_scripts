@@ -4,4 +4,8 @@
     name: '*'
     state: latest
     use_backend: yum
+<<<<<<< HEAD
 ...
+=======
+...
+>>>>>>> 067c8b43281323b729bc3ce643cdb91297bfd1e3
