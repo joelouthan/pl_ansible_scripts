@@ -1,12 +1,22 @@
 ---
 - name: Create a change request
   snow_record:
-    state: present
     username: "{{ sn_username }}"
     password: "{{ sn_password }}"
     instance: "{{ sn_instance }}"
+    state: present
+    table: incident
+    # Default: table is incident for type of ticket
+    # Change to "change", etc. if you want another type 
     data:
+      assignment_group: "{{ sn_assignment_group }}"
+      caller: "{{ sn_caller }}"
+      contact: "{{ sn_contact }}"
+      category: "{{ sn_category }}"
+      contact_type: "{{ contact_type }}"
       severity: "{{ sn_severity }}"
       priority: "{{ sn_priority }}"
-      short_description: "This is a test opened by Ansible {{ ansible_date_time.iso8601 }}"
+      impact: "{{ sn_impact }}"
+      urgency: "{{ sn_urgency }}"
+      short_description: "Test incident opened by Ansible {{ ansible_date_time.iso8601 }}"
 ...
