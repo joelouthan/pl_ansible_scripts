@@ -1,0 +1,10 @@
+---
+- name: CIS Benchmark - Linux
+  hosts: rhel
+  gather_facts: true
+
+  tasks:
+  - name: Auditing using ansible-security-hardening cis roles
+    include_role:
+      name: cis
+... 
