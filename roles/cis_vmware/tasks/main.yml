@@ -8,4 +8,8 @@
 - import_tasks: 5/tasks.yml
 - import_tasks: 5/tasksnotscored.yml
 - import_tasks: 6/tasks.yml
+<<<<<<< HEAD:roles/cis_vmware/tasks/main.yml
 ...
+=======
+...
+>>>>>>> 523fa6a347d9354cdff37cb1b0be23587687f4aa:roles/cis/tasks/main.yml
