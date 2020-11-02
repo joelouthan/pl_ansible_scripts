@@ -5,7 +5,7 @@
   any_errors_fatal: false
 
   roles:
-    - role: cis
+    - role: cis_vmware
   vars:
     - verify: false
     - include_task_rule : "{{ \"verify/{{ item }}\" if verify|bool else \"{{ item }}\" }}"
