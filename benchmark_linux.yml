@@ -3,8 +3,9 @@
   hosts: rhel
   gather_facts: true
 
-  tasks:
-  - name: Auditing using ansible-security-hardening cis roles
-    include_role:
-      name: cis
+  roles:
+    - role: cis
+  vars:
+    - verify: false
+    - include_task_rule : "{{ \"verify/{{ item }}\" if verify|bool else \"{{ item }}\" }}"
 ... 
