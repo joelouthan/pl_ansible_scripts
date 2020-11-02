@@ -1,5 +1,5 @@
 ---
-- name: CIS Benchmark - Linux
+- name: CIS Benchmark - VMWare
   hosts: rhel
   gather_facts: true
   any_errors_fatal: false
