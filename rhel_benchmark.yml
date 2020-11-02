@@ -80,10 +80,10 @@
     var_sshd_set_keepalive: !!str 0
 
   tasks:
-    - name: Debug var
-      debug:
-          var: ansible_virtualization_type
-      tags: always
+#    - name: Debug var
+#      debug:
+#          var: ansible_virtualization_type
+#      tags: always
     - name: Include CIS Benchmark role
       include_role:
           name: cis_rhel_7 # required. The name of the role to be executed.
