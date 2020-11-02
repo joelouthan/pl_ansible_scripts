@@ -1,0 +1,12 @@
+---
+- name: CIS Benchmark - VMWare
+  hosts: rhel
+  gather_facts: true
+  any_errors_fatal: false
+
+  roles:
+    - role: cis_vmware
+  vars:
+    - verify: false
+    - include_task_rule : "{{ \"verify/{{ item }}\" if verify|bool else \"{{ item }}\" }}"
+... 
