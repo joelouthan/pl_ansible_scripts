@@ -7,7 +7,7 @@
 
   tasks:
   - name: Include servicenow role and create_incident task
-    include_role: 
+    include_role:
       name: servicenow
       tasks_from: create_incident
     vars:
