@@ -86,6 +86,6 @@
 #      tags: always
     - name: Include CIS Benchmark role
       include_role:
-          name: cis_rhel_7 # required. The name of the role to be executed.
+          name: rhel_7_cis_c2s # required. The name of the role to be executed.
       tags: always
 ...
