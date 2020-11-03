@@ -9,6 +9,6 @@
       #   tags: always
       - name: Include CIS Benchmark role
         include_role:
-            name: cis_winserver # required. The name of the role to be executed.
+            name: win_cis # required. The name of the role to be executed.
         tags: always
 ...
