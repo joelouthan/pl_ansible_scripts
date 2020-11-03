@@ -1,0 +1,7 @@
+---
+- name: Raise error
+  fail:
+    msg: Changes are required - system is noncompliant
+  when: ansible_check_mode | bool
+  listen: Change Required
+...
