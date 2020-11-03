@@ -1,5 +1,10 @@
 ---
-- name: Modify the System Login Banner - remove incorrect banner
+- name: |
+    Control-ID: 1.8.1.2
+    Title: Ensure local login warning banner is configured properly (Automated)
+    Description: The contents of the /etc/issue file are displayed to users prior to login for local terminals.
+    Unix-based systems have typically displayed information about the OS release and patch level upon logging in to the system. This information can be useful to developers who are developing software for a particular OS platform. If mingetty(8) supports the following options, they display operating system information: \m - machine architecture \r - operating system release \s - operating system name \v - operating system version - or the operating system's name
+    Rationale: Warning messages inform users who are attempting to login to the system of their legal status regarding the system and must include the name of the organization that owns the system and any monitoring policies that are in place. Displaying OS and patch level information in login banners also has the side effect of providing detailed system information to attackers attempting to target specific exploits of a system. Authorized users can easily get this information by running the " uname -a " command once they have logged in.
   file:
     state: absent
     path: /etc/issue
@@ -17,7 +22,12 @@
     - NIST-800-171-3.1.9
     - DISA-STIG-RHEL-07-010050
 
-- name: Modify the System Login Banner - add correct banner
+- name: |
+    Control-ID: 1.8.1.2
+    Title: Ensure local login warning banner is configured properly (Automated)
+    Description: The contents of the /etc/issue file are displayed to users prior to login for local terminals.
+    Unix-based systems have typically displayed information about the OS release and patch level upon logging in to the system. This information can be useful to developers who are developing software for a particular OS platform. If mingetty(8) supports the following options, they display operating system information: \m - machine architecture \r - operating system release \s - operating system name \v - operating system version - or the operating system's name
+    Rationale: Warning messages inform users who are attempting to login to the system of their legal status regarding the system and must include the name of the organization that owns the system and any monitoring policies that are in place. Displaying OS and patch level information in login banners also has the side effect of providing detailed system information to attackers attempting to target specific exploits of a system. Authorized users can easily get this information by running the " uname -a " command once they have logged in.
   lineinfile:
     dest: /etc/issue
     line: '{{ login_banner_text | regex_replace("^\^(.*)\$$", "\1") | regex_replace("^\((.*)\|.*\)$",
