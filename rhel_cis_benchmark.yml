@@ -1,0 +1,5 @@
+---
+- name: CIS Benchmark for RHEL7
+  gather_facts: true
+  include_role: rhel_7_cis
+...
