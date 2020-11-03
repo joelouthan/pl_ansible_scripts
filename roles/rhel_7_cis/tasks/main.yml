@@ -3,6 +3,7 @@
   file:
     state: absent
     path: /etc/issue
+  notify: Change Required
   tags:
     - banner_etc_issue
     - medium_severity
@@ -23,6 +24,7 @@
       "\1") | regex_replace("\[\\s\\n\]\+"," ") | regex_replace("\(\?:\[\\n\]\+\|\(\?:\\\\n\)\+\)",
       "\n") | regex_replace("\\", "") | wordwrap() }}'
     create: true
+  notify: Change Required
   tags:
     - banner_etc_issue
     - medium_severity
