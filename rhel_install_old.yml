@@ -5,5 +5,5 @@
   tasks:
   - include_role:
       name: rhel_patch
-      tasks_from: install_old
+      tasks_from: install_emacs
 ...
