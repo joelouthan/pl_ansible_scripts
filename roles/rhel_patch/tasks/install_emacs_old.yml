@@ -1,7 +1,7 @@
 ---
-- name: Install emacs
+- name: Install old
   yum:
     allow_downgrade: yes # not required. Specify if the named package and version is allowed to downgrade a maybe already installed higher version of that package. Note that setting allow_downgrade=True can make this module behave in a non-idempotent way. The task could end up with a set of packages that does not match the complete list of specified packages to install (because dependencies between the downgraded package and others can cause changes to the packages which were in the earlier transaction).
-    name: emacs-23.0
+    name: firefox-24*
     state: present
 ...
