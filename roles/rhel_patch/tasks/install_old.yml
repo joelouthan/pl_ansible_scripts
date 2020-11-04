@@ -2,7 +2,7 @@
 - name: Install old
   yum:
     allow_downgrade: yes 
-    name: cups-2.2.6-25*
+    name: cups-1.6.3-14*
     state: present
     use_backend: yum
 ...
