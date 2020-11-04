@@ -1,0 +1,9 @@
+---
+- name: Installing older emacs for demo
+  hosts: rhel
+
+  tasks:
+  - include_role:
+      name: rhel_patch
+      tasks_from: install_emacs_older
+...
