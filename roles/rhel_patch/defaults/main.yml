@@ -1,2 +1,3 @@
 ---
 # defaults file for patching
+rhel_patch_packagename: '*'
