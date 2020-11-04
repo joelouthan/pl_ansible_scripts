@@ -4,5 +4,7 @@
 
   tasks:
   - name: checking
-    shell: 'yum --showduplicates list cups*'
+    shell: 'yum downgrade cups'
+    become: true
+    become_method: sudo
 ...
