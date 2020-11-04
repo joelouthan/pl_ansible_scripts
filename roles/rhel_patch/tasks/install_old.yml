@@ -2,6 +2,6 @@
 - name: Install old
   yum:
     allow_downgrade: yes 
-    name: firefox-24*
+    name: firefox-60*
     state: present
 ...
