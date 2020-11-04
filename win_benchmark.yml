@@ -3,10 +3,6 @@
     gather_facts: true
 
     tasks:
-      # - name: Debug var
-      #   debug:
-      #       var: ansible_virtualization_type
-      #   tags: always
       - name: Include CIS Benchmark role
         include_role:
             name: win_cis # required. The name of the role to be executed.
