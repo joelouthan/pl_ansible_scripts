@@ -6,12 +6,4 @@
     use_backend: yum
   tags:
   - all
-
-- name: Updating emacs
-  yum: 
-    name: emacs
-    state:
-    use_backend: yum
-  tags:
-  - emacs
 ...
