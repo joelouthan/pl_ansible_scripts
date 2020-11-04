@@ -2,7 +2,7 @@
 - name: Install old
   yum:
     allow_downgrade: yes 
-    name: firefox-60*
+    name: cups-2.2.6-25*
     state: present
     use_backend: yum
 ...
