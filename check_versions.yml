@@ -5,7 +5,4 @@
   tasks:
   - name: checking
     shell: 'yum downgrade cups'
-    become: true
-    become_method: sudo
-    become_user: root
 ...
