@@ -1,3 +1,4 @@
 ---
 # defaults file for patching
 rhel_patch_packagename: '*'
+rhel_patch_state: latest
