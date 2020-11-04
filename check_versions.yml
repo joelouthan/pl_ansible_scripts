@@ -1,0 +1,8 @@
+---
+- name: Check versions of cups available
+  host: rhel
+
+  tasks:
+  - name: checking
+    shell: 'yum --showduplicates list cups*'
+...
