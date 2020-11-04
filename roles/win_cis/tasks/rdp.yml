@@ -5,6 +5,7 @@
     name: "fPromptForPassword"
     data: "1"
     type: dword
+  notify: Change Required
 
 - name: Strong Encryption for Windows Remote Desktop Required | windows-rdp-101
   win_regedit:
@@ -12,3 +13,5 @@
     name: "MinEncryptionLevel"
     data: "3"
     type: dword
+  notify: Change Required
+...

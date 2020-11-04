@@ -5,6 +5,7 @@
     name: "MaxSize"
     data: "1"
     type: dword
+  notify: Change Required
 
 - name: Configure System Event Log (Security) | windows-audit-101
   win_regedit:
@@ -12,6 +13,7 @@
     name: "MaxSize"
     data: "1"
     type: dword
+  notify: Change Required
 
 - name: Configure System Event Log (Setup) | windows-audit-102
   win_regedit:
@@ -19,6 +21,7 @@
     name: "MaxSize"
     data: "1"
     type: dword
+  notify: Change Required
 
 - name: Configure System Event Log (System) | windows-audit-103
   win_regedit:
@@ -26,12 +29,14 @@
     name: "MaxSize"
     data: "1"
     type: dword
+  notify: Change Required
 
 - name: Account Logon Audit Log | windows-audit-203
   win_command: AuditPol /Set /Category:"Account Logon" /Failure:Enable /Success:Enable
   register: accountLogonAudit
   args:
     creates: C:\accountLogonAudit.lock
+  notify: Change Required
 
 - name: Create accountLogonAudit.lock if account audit log was activated
   win_copy:
@@ -39,12 +44,14 @@
     content: ""
     force: no
   when: accountLogonAudit
+  notify: Change Required
 
 - name: Audit Application Group Management | windows-audit-204
   win_command: AuditPol /Set /SubCategory:"Application Group Management" /Failure:Enable /Success:Enable
   register: appGroupMngmtAudit
   args:
     creates: C:\appGroupMngmtAudit.lock
+  notify: Change Required
 
 - name: Create appGroupMngmtAudit.lock if group manangement audit log was activated
   win_copy:
@@ -52,12 +59,14 @@
     content: ""
     force: no
   when: appGroupMngmtAudit
+  notify: Change Required
 
 - name: Audit Computer Account Management | windows-audit-205
   win_command: AuditPol /Set /SubCategory:"Computer Account Management" /Failure:Enable /Success:Enable
   register: appAccountMngmtAudit
   args:
     creates: C:\appAccountMngmtAudit.lock
+  notify: Change Required
 
 - name: Create appAccountMngmtAudit.lock if computer account manangement audit log was activated
   win_copy:
@@ -65,13 +74,14 @@
     content: ""
     force: no
   when: appAccountMngmtAudit
-
+  notify: Change Required
 
 - name: Audit Application Group Management | windows-audit-206
   win_command: AuditPol /Set /SubCategory:"Distribution Group Management" /Failure:Enable /Success:Enable
   register: distGroupMngmtAudit
   args:
     creates: C:\distGroupMngmtAudit.lock
+  notify: Change Required
 
 - name: Create distGroupMngmtAudit.lock if dist group manangement audit log was activated
   win_copy:
@@ -79,3 +89,5 @@
     content: ""
     force: no
   when: distGroupMngmtAudit
+  notify: Change Required
+...

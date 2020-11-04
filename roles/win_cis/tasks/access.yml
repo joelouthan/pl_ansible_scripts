@@ -3,6 +3,7 @@
   win_file:
     path: C:\windows
     state: directory
+  notify: Change Required
 
 - name: Safe DLL Search Mode is Enabled | windows-base-101
   win_regedit:
@@ -10,6 +11,7 @@
     name: "SafeDllSearchMode"
     data: "0"
     type: dword
+  notify: Change Required
 
 - name: Anonymous Access to Windows Shares and Named Pipes is Disallowed | windows-base-102
   win_regedit:
@@ -17,6 +19,7 @@
     name: "RestrictNullSessAccess"
     data: "1"
     type: dword
+  notify: Change Required
 
 - name: All Shares are Configured to Prevent Anonymous Access | windows-base-103
   win_regedit:
@@ -24,6 +27,7 @@
     name: "NullSessionShares"
     data: ""
     type: multistring
+  notify: Change Required
 
 - name: Force Encrypted Windows Network Passwords | windows-base-104
   win_regedit:
@@ -31,6 +35,7 @@
     name: "EnablePlainTextPassword"
     data: "0"
     type: dword
+  notify: Change Required
 
 - name: Disable SMB1 to Windows Shares | windows-base-105
   win_regedit:
@@ -38,6 +43,7 @@
     name: "SMB1"
     data: "0"
     type: dword
+  notify: Change Required
 
 - name: Strong Windows NTLMv2 Authentication Enabled; Weak LM Disabled | windows-base-201
   win_regedit:
@@ -45,6 +51,7 @@
     name: "LmCompatibilityLevel"
     data: "4"
     type: dword
+  notify: Change Required
 
 - name: Enable Strong Encryption for Windows Network Sessions on Clients | windows-base-202
   win_regedit:
@@ -52,6 +59,7 @@
     name: "NtlmMinClientSec"
     data: "537395200"
     type: dword
+  notify: Change Required
 
 - name: Enable Strong Encryption for Windows Network Sessions on Servers | windows-base-203
   win_regedit:
@@ -59,3 +67,5 @@
     name: "NtlmMinServerSec"
     data: "537395200"
     type: dword
+  notify: Change Required
+...

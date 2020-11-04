@@ -5,6 +5,7 @@
     name: "Isolation64Bit"
     data: "1"
     type: dword
+  notify: Change Required
 
 - name: Run antimalware programs against ActiveX controls | windows-ie-102
   win_regedit:
@@ -12,3 +13,5 @@
     name: "270C"
     data: "0"
     type: dword
+  notify: Change Required
+...

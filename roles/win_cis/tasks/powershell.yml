@@ -6,6 +6,7 @@
     name: "EnableScriptBlockLogging"
     data: "0"
     type: dword
+  notify: Change Required
 
 # Transcription creates a unique record of every PowerShell session, including all input and output, exactly as it appears in the session.
 - name: Powershell Transcription | powershell-transcription
@@ -14,3 +15,5 @@
     name: "EnableTranscripting"
     data: "0"
     type: dword
+  notify: Change Required
+...

@@ -5,6 +5,7 @@
     name: "value"
     data: "0"
     type: dword
+  notify: Change Required
 
 - name: Disable Windows Store | disable-windows-store
   win_regedit:
@@ -12,6 +13,7 @@
     name: "AutoDownload"
     data: "4"
     type: dword
+  notify: Change Required
 
 - name: Ensure Turn off Automatic Download and Install of Updates is set to Disabled
   win_regedit:
@@ -19,6 +21,7 @@
     name: "DisableOSUpgrade"
     data: "1"
     type: dword
+  notify: Change Required
 
 - name: Disable indexing encrypted files | disable-index-encrypted-files
   win_regedit:
@@ -26,3 +29,5 @@
     name: "AllowIndexingEncryptedStoresOrItems"
     data: "0"
     type: dword
+  notify: Change Required
+...
