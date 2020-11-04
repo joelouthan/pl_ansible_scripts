@@ -11,6 +11,7 @@
   yum: 
     name: emacs
     state:
+    use_backend: yum
   tags:
   - emacs
 ...
