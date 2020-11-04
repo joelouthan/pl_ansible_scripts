@@ -1,8 +1,10 @@
 ---
-- name: Check versions of cups available
+- name: Downgrade cups
   hosts: rhel
+  gather_facts: true
 
   tasks:
   - name: checking
     shell: 'yum downgrade cups'
+    become: true
 ...

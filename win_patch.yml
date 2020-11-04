@@ -1,0 +1,10 @@
+---
+- name: Windows Updating
+  hosts: windows
+  any_errors_fatal: false
+
+  tasks:
+  - name: Windows - Install all security, critical, and rollup updates
+    include_role: 
+      name: win_patch
+...

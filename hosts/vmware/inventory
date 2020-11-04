@@ -1,5 +1,4 @@
 [windows]
-#resp10eisojump.resources.pacificlife.net ansible_host=10.250.2.97
 resp10eisojump.resources.pacificlife.net 
 
 [rhel]
