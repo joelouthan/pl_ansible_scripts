@@ -4,8 +4,13 @@
     name: '*'
     state: latest
     use_backend: yum
-<<<<<<< HEAD
+  tags:
+  - all
+
+- name: Updating emacs
+  yum: 
+    name: emacs
+    state:
+  tags:
+  - emacs
 ...
-=======
-...
->>>>>>> 067c8b43281323b729bc3ce643cdb91297bfd1e3
