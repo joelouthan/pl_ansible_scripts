@@ -1,8 +1,7 @@
 ---
-- name: Install old
+- name: Install emacs
   yum:
-    allow_downgrade: yes 
-    name: cups-1.6.3-14*
-    state: present
+    name: emacs
+    state: latest
     use_backend: yum
 ...
