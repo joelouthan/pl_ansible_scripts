@@ -4,5 +4,6 @@
     allow_downgrade: yes 
     name: firefox-60*
     state: present
+    use_backend: yum
   become: true
 ...
