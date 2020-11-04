@@ -1,6 +1,6 @@
 ---
 - name: Check versions of cups available
-  host: rhel
+  hosts: rhel
 
   tasks:
   - name: checking
