@@ -1,7 +1,7 @@
 ---
 - name: Updating all packages
   yum:
-    name: '*'
+    name: "{{ rhel_patch_packagename }}"
     state: latest
     use_backend: yum
   tags:
