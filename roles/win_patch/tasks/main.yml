@@ -1,3 +1,22 @@
----
+ ---
+- name: Installing
+  win_updates:
+    category__names:
+    - SecurityUpdates
+  tags:
+  - security
 
+- name: Installing
+  win_updates:
+    category__names:
+    - CriticalUpdates
+  tags:
+  - critical
+
+- name: Installing
+  win_updates:
+    category__names:
+    - UpdateRollups
+  tags:
+  - rollups
 ...
