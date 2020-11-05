@@ -1,7 +1,7 @@
 ---
 - name: Installing Applications Updates
   win_updates:
-    category__names: Application
+    category_names: Application
     reboot: no
     state: installed # not required. choices: installed;searched. Controls whether found updates are returned as a list or actually installed.,This module also supports Ansible check mode, which has the same effect as setting state=searched
   tags:
@@ -9,14 +9,14 @@
 
 - name: Installing Security Updates
   win_updates:
-    category__names: SecurityUpdates
+    category_names: SecurityUpdates
     reboot: no
   tags:
   - SecurityUpdates
 
 - name: Installing Critical Updates
   win_updates:
-    category__names: CriticalUpdates
+    category_names: CriticalUpdates
     reboot: no
   tags:
   - CriticalUpdates
