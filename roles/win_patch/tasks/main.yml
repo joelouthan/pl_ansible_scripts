@@ -33,81 +33,81 @@
 
 - name: Installing ServicePacks Updates
   win_updates:
-      category_names: ServicePacks 
-      reboot: no 
-      state: installed 
+      category_names: ServicePacks
+      reboot: no
+      state: installed
   tags:
   - ServicePacks
-  
+ 
 - name: Installing Connectors Updates
   win_updates:
-      category_names: Connectors 
-      reboot: no 
-      state: installed 
+      category_names: Connectors
+      reboot: no
+      state: installed
   tags:
   - Connectors
-  
+ 
 - name: Installing DefinitionUpdates Updates
   win_updates:
-      category_names: DefinitionUpdates 
-      reboot: no 
-      state: installed 
+      category_names: DefinitionUpdates
+      reboot: no
+      state: installed
   tags:
   - DefinitionUpdates
-  
+ 
 - name: Installing DeveloperKits Updates
   win_updates:
-      category_names: DeveloperKits 
-      reboot: no 
-      state: installed 
+      category_names: DeveloperKits
+      reboot: no
+      state: installed
   tags:
   - DeveloperKits
-  
+ 
 - name: Installing FeaturePacks Updates
   win_updates:
-      category_names: ServicePacks 
-      reboot: no 
-      state: installed 
+      category_names: ServicePacks
+      reboot: no
+      state: installed
   tags:
   - FeaturePacks
-  
+ 
 - name: Installing DeveloperKits Updates
   win_updates:
-      category_names: DeveloperKits 
-      reboot: no 
-      state: installed 
+      category_names: DeveloperKits
+      reboot: no
+      state: installed
   tags:
   - DeveloperKits
-  
+ 
 - name: Installing FeaturePacks Updates
   win_updates:
-      category_names: FeaturePacks 
-      reboot: no 
-      state: installed 
+      category_names: FeaturePacks
+      reboot: no
+      state: installed
   tags:
   - FeaturePacks
-  
+ 
 - name: Installing Guidance Updates
   win_updates:
-      category_names: Guidance 
-      reboot: no 
-      state: installed 
+      category_names: Guidance
+      reboot: no
+      state: installed
   tags:
   - Guidance
 
 - name: Installing Tools
   win_updates:
-      category_names: Tools 
-      reboot: no 
-      state: installed 
+      category_names: Tools
+      reboot: no
+      state: installed
   tags:
   - Tools
 
 - name: Installing Updates
   win_updates:
-      category_names: Updates 
-      reboot: no 
-      state: installed 
+      category_names: Updates
+      reboot: no
+      state: installed
   tags:
   - Updates
 
