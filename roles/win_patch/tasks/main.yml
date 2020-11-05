@@ -3,99 +3,113 @@
   win_updates:
     category_names: Application
     reboot: no
-    state: installed # not required. choices: installed;searched. Controls whether found updates are returned as a list or actually installed.,This module also supports Ansible check mode, which has the same effect as setting state=searched
-  tags: Application
+    state: installed
+  tags:
+  - Application
 
 - name: Installing Security Updates
   win_updates:
     category_names: SecurityUpdates
     reboot: no
     state: installed
-  tags: SecurityUpdates
+  tags:
+  - SecurityUpdates
 
 - name: Installing Critical Updates
   win_updates:
     category_names: CriticalUpdates
     reboot: no
     state: installed
-  tags: CriticalUpdates
+  tags:
+  - CriticalUpdates
 
 - name: Installing Rollup Updates
   win_updates:
     category__names: UpdateRollups
     reboot: no
     state: installed
-  tags: UpdateRollups
+  tags:
+  - UpdateRollups
 
 - name: Installing ServicePacks Updates
   win_updates:
-      category_names: ServicePacks # choices: Application;Connectors;CriticalUpdates;DefinitionUpdates;DeveloperKits;FeaturePacks;Guidance;SecurityUpdates;ServicePacks;Tools;UpdateRollups;Updates. A scalar or list of categories to install updates from
-      reboot: no # not required. Ansible will automatically reboot the remote host if it is required and continue to install updates after the reboot.,This can be used instead of using a M(win_reboot) task after this one and ensures all updates for that category is installed in one go.,Async does not work when C(reboot=True).
-      state: installed # not required. choices: installed;searched. Controls whether found updates are returned as a list or actually installed.,This module also supports Ansible check mode, which has the same effect as setting state=searched
-  tags: ServicePacks
+      category_names: ServicePacks 
+      reboot: no 
+      state: installed 
+  tags:
+  - ServicePacks
   
 - name: Installing Connectors Updates
   win_updates:
-      category_names: Connectors # choices: Application;Connectors;CriticalUpdates;DefinitionUpdates;DeveloperKits;FeaturePacks;Guidance;SecurityUpdates;ServicePacks;Tools;UpdateRollups;Updates. A scalar or list of categories to install updates from
-      reboot: no # not required. Ansible will automatically reboot the remote host if it is required and continue to install updates after the reboot.,This can be used instead of using a M(win_reboot) task after this one and ensures all updates for that category is installed in one go.,Async does not work when C(reboot=True).
-      state: installed # not required. choices: installed;searched. Controls whether found updates are returned as a list or actually installed.,This module also supports Ansible check mode, which has the same effect as setting state=searched
-  tags: Connectors
+      category_names: Connectors 
+      reboot: no 
+      state: installed 
+  tags:
+  - Connectors
   
 - name: Installing DefinitionUpdates Updates
   win_updates:
-      category_names: DefinitionUpdates # choices: Application;Connectors;CriticalUpdates;DefinitionUpdates;DeveloperKits;FeaturePacks;Guidance;SecurityUpdates;ServicePacks;Tools;UpdateRollups;Updates. A scalar or list of categories to install updates from
-      reboot: no # not required. Ansible will automatically reboot the remote host if it is required and continue to install updates after the reboot.,This can be used instead of using a M(win_reboot) task after this one and ensures all updates for that category is installed in one go.,Async does not work when C(reboot=True).
-      state: installed # not required. choices: installed;searched. Controls whether found updates are returned as a list or actually installed.,This module also supports Ansible check mode, which has the same effect as setting state=searched
-  tags: DefinitionUpdates
+      category_names: DefinitionUpdates 
+      reboot: no 
+      state: installed 
+  tags:
+  - DefinitionUpdates
   
 - name: Installing DeveloperKits Updates
   win_updates:
-      category_names: DeveloperKits # choices: Application;Connectors;CriticalUpdates;DefinitionUpdates;DeveloperKits;FeaturePacks;Guidance;SecurityUpdates;ServicePacks;Tools;UpdateRollups;Updates. A scalar or list of categories to install updates from
-      reboot: no # not required. Ansible will automatically reboot the remote host if it is required and continue to install updates after the reboot.,This can be used instead of using a M(win_reboot) task after this one and ensures all updates for that category is installed in one go.,Async does not work when C(reboot=True).
-      state: installed # not required. choices: installed;searched. Controls whether found updates are returned as a list or actually installed.,This module also supports Ansible check mode, which has the same effect as setting state=searched
-  tags: DeveloperKits
+      category_names: DeveloperKits 
+      reboot: no 
+      state: installed 
+  tags:
+  - DeveloperKits
   
 - name: Installing FeaturePacks Updates
   win_updates:
-      category_names: ServicePacks # choices: Application;Connectors;CriticalUpdates;DefinitionUpdates;DeveloperKits;FeaturePacks;Guidance;SecurityUpdates;ServicePacks;Tools;UpdateRollups;Updates. A scalar or list of categories to install updates from
-      reboot: no # not required. Ansible will automatically reboot the remote host if it is required and continue to install updates after the reboot.,This can be used instead of using a M(win_reboot) task after this one and ensures all updates for that category is installed in one go.,Async does not work when C(reboot=True).
-      state: installed # not required. choices: installed;searched. Controls whether found updates are returned as a list or actually installed.,This module also supports Ansible check mode, which has the same effect as setting state=searched
-  tags: FeaturePacks
+      category_names: ServicePacks 
+      reboot: no 
+      state: installed 
+  tags:
+  - FeaturePacks
   
 - name: Installing DeveloperKits Updates
   win_updates:
-      category_names: DeveloperKits # choices: Application;Connectors;CriticalUpdates;DefinitionUpdates;DeveloperKits;FeaturePacks;Guidance;SecurityUpdates;ServicePacks;Tools;UpdateRollups;Updates. A scalar or list of categories to install updates from
-      reboot: no # not required. Ansible will automatically reboot the remote host if it is required and continue to install updates after the reboot.,This can be used instead of using a M(win_reboot) task after this one and ensures all updates for that category is installed in one go.,Async does not work when C(reboot=True).
-      state: installed # not required. choices: installed;searched. Controls whether found updates are returned as a list or actually installed.,This module also supports Ansible check mode, which has the same effect as setting state=searched
-  tags: DeveloperKits
+      category_names: DeveloperKits 
+      reboot: no 
+      state: installed 
+  tags:
+  - DeveloperKits
   
 - name: Installing FeaturePacks Updates
   win_updates:
-      category_names: FeaturePacks # choices: Application;Connectors;CriticalUpdates;DefinitionUpdates;DeveloperKits;FeaturePacks;Guidance;SecurityUpdates;ServicePacks;Tools;UpdateRollups;Updates. A scalar or list of categories to install updates from
-      reboot: no # not required. Ansible will automatically reboot the remote host if it is required and continue to install updates after the reboot.,This can be used instead of using a M(win_reboot) task after this one and ensures all updates for that category is installed in one go.,Async does not work when C(reboot=True).
-      state: installed # not required. choices: installed;searched. Controls whether found updates are returned as a list or actually installed.,This module also supports Ansible check mode, which has the same effect as setting state=searched
-  tags: FeaturePacks
+      category_names: FeaturePacks 
+      reboot: no 
+      state: installed 
+  tags:
+  - FeaturePacks
   
 - name: Installing Guidance Updates
   win_updates:
-      category_names: Guidance # choices: Application;Connectors;CriticalUpdates;DefinitionUpdates;DeveloperKits;FeaturePacks;Guidance;SecurityUpdates;ServicePacks;Tools;UpdateRollups;Updates. A scalar or list of categories to install updates from
-      reboot: no # not required. Ansible will automatically reboot the remote host if it is required and continue to install updates after the reboot.,This can be used instead of using a M(win_reboot) task after this one and ensures all updates for that category is installed in one go.,Async does not work when C(reboot=True).
-      state: installed # not required. choices: installed;searched. Controls whether found updates are returned as a list or actually installed.,This module also supports Ansible check mode, which has the same effect as setting state=searched
-  tags: Guidance
+      category_names: Guidance 
+      reboot: no 
+      state: installed 
+  tags:
+  - Guidance
 
 - name: Installing Tools
   win_updates:
-      category_names: Tools # choices: Application;Connectors;CriticalUpdates;DefinitionUpdates;DeveloperKits;FeaturePacks;Guidance;SecurityUpdates;ServicePacks;Tools;UpdateRollups;Updates. A scalar or list of categories to install updates from
-      reboot: no # not required. Ansible will automatically reboot the remote host if it is required and continue to install updates after the reboot.,This can be used instead of using a M(win_reboot) task after this one and ensures all updates for that category is installed in one go.,Async does not work when C(reboot=True).
-      state: installed # not required. choices: installed;searched. Controls whether found updates are returned as a list or actually installed.,This module also supports Ansible check mode, which has the same effect as setting state=searched
-  tags: Tools
+      category_names: Tools 
+      reboot: no 
+      state: installed 
+  tags:
+  - Tools
 
 - name: Installing Updates
   win_updates:
-      category_names: Updates # choices: Application;Connectors;CriticalUpdates;DefinitionUpdates;DeveloperKits;FeaturePacks;Guidance;SecurityUpdates;ServicePacks;Tools;UpdateRollups;Updates. A scalar or list of categories to install updates from
-      reboot: no # not required. Ansible will automatically reboot the remote host if it is required and continue to install updates after the reboot.,This can be used instead of using a M(win_reboot) task after this one and ensures all updates for that category is installed in one go.,Async does not work when C(reboot=True).
-      state: installed # not required. choices: installed;searched. Controls whether found updates are returned as a list or actually installed.,This module also supports Ansible check mode, which has the same effect as setting state=searched
-  tags: Updates
+      category_names: Updates 
+      reboot: no 
+      state: installed 
+  tags:
+  - Updates
 
 - name: Search and download any patches without installing them
   win_updates:
