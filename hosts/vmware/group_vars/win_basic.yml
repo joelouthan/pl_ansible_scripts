@@ -9,3 +9,4 @@ ansible_password: !vault |
   3636
 
 ansible_winrm_transport: basic
+ansible_winrm_scheme: http
