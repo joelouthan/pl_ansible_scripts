@@ -5,6 +5,6 @@
 
   tasks:
   - name: Installing updates...
-    include_role: 
+    include_role:
       name: win_patch
 ...

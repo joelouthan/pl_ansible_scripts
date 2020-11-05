@@ -38,7 +38,7 @@
       state: installed
   tags:
   - ServicePacks
- 
+
 - name: Installing Connectors Updates
   win_updates:
       category_names: Connectors
@@ -46,7 +46,7 @@
       state: installed
   tags:
   - Connectors
- 
+
 - name: Installing DefinitionUpdates Updates
   win_updates:
       category_names: DefinitionUpdates
@@ -54,7 +54,7 @@
       state: installed
   tags:
   - DefinitionUpdates
- 
+
 - name: Installing DeveloperKits Updates
   win_updates:
       category_names: DeveloperKits
@@ -62,7 +62,7 @@
       state: installed
   tags:
   - DeveloperKits
- 
+
 - name: Installing FeaturePacks Updates
   win_updates:
       category_names: ServicePacks
@@ -70,7 +70,7 @@
       state: installed
   tags:
   - FeaturePacks
- 
+
 - name: Installing DeveloperKits Updates
   win_updates:
       category_names: DeveloperKits
@@ -78,7 +78,7 @@
       state: installed
   tags:
   - DeveloperKits
- 
+
 - name: Installing FeaturePacks Updates
   win_updates:
       category_names: FeaturePacks
@@ -86,7 +86,7 @@
       state: installed
   tags:
   - FeaturePacks
- 
+
 - name: Installing Guidance Updates
   win_updates:
       category_names: Guidance
