@@ -1,6 +1,6 @@
 ---
 - name: Ping All Windows Servers
-  hosts: windows
+  hosts: windows:win_basic
 
   tasks:
   - name: Test connection

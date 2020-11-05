@@ -1,6 +1,9 @@
 [windows]
 resp10eisojump.resources.pacificlife.net
 
+[win_basic]
+10.84.3.39
+
 [rhel]
 rest10infa01.resources.pacificlife.net
 rest10infa02.resources.pacificlife.net
