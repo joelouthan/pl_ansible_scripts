@@ -1,4 +1,5 @@
 ---
+# Testing git push
 - name: Pinging all RHEL servers
   hosts: rhel
   remote_user: ansible.linux
