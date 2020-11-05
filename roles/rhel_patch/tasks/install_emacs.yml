@@ -1,7 +1,0 @@
----
-- name: Install emacs
-  yum:
-    name: emacs
-    state: latest
-    use_backend: yum
-...
