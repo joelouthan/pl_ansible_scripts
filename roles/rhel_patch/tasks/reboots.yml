@@ -1,4 +1,5 @@
 ---
 - name: REBOOTING
   reboot:
+  become: true
 ...
