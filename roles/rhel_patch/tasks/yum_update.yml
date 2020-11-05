@@ -4,6 +4,7 @@
     name: "{{ rhel_patch_packagename }}"
     state: "{{ rhel_patch_state }}"
     #use_backend: yum
+  become: true
   tags:
   - all
 ...
