@@ -2,7 +2,8 @@ plugin: amazon.aws.aws_ec2
 
 regions:
   - us-west-2
+  - us-east-1
 
 vpc_destination_variable: private_ip_address
 
-validate_certs: false
+# validate_certs: false
