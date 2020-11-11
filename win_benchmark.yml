@@ -1,5 +1,5 @@
 ---
-  - hosts: windows
+  - hosts: platform_windows
     gather_facts: true
 
     tasks:

@@ -1,4 +1,8 @@
 ---
+
+# Download them locally using the following command:
+# cd collections; ansible-galaxy collection install -r requirements.yml -p ./ -f
+
 collections:
 # https://github.com/ansible-collections/amazon.aws
 - name: amazon.aws

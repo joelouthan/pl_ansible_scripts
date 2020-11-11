@@ -32,7 +32,7 @@
 #
 ###############################################################################
 
-- hosts: rhel
+- hosts: platform_linux
   gather_facts: true
   vars:
     var_removable_partition: !!str /dev/cdrom

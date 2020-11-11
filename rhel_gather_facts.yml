@@ -1,6 +1,6 @@
 ---
 - name: Get all the Systems OSs
-  hosts: rhel
+  hosts: platform_linux
   remote_user: ansible.linux
   gather_facts: yes
   become: false

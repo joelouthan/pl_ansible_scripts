@@ -1,7 +1,7 @@
 ---
 # Testing git push
 - name: Pinging all RHEL servers
-  hosts: rhel
+  hosts: platform_linux
   remote_user: ansible.linux
   
   tasks:

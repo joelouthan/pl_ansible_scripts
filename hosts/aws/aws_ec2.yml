@@ -4,4 +4,6 @@ regions:
   - us-west-2
   - us-east-1
 
-validate_certs: false
+keyed_groups:
+  - key: platform | default("linux") | regex_replace("[^A-Za-z0-9\_]", "_")
+    prefix: platform

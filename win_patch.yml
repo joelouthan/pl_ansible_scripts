@@ -1,6 +1,6 @@
 ---
 - name: Windows Updating
-  hosts: windows
+  hosts: platform_windows
   any_errors_fatal: false
 
   tasks:

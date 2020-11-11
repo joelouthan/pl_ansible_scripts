@@ -1,6 +1,6 @@
 ---
 - name: Installing older software for demo
-  hosts: rhel
+  hosts: platform_linux
 
   tasks:
   - include_role:
