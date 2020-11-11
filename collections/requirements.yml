@@ -1,0 +1,5 @@
+---
+collections:
+# https://github.com/ansible-collections/amazon.aws
+- name: amazon.aws
+  version: 1.2.1
