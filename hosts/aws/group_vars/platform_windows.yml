@@ -1,5 +1,5 @@
 ansible_connection: winrm
-ansible_user: s_ansible_windows_p@CORP.PACIFICLIFE.NET
+ansible_user: s_ansible_windows_p
 ansible_password: !vault |
   $ANSIBLE_VAULT;1.1;AES256
   32306434306631623333363638326138316439613266356235386132323265383932656138306131
