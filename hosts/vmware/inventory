@@ -10,3 +10,6 @@ rest10infa05.resources.pacificlife.net
 
 [snow_dev]
 paclifedev.service-now.com
+
+[platform_esxi]
+crdesx55.resources.pacificlife.net
