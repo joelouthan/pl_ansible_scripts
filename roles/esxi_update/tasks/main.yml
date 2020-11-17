@@ -1,2 +1,2 @@
 - name: Test command
-  shell: esxcli software profile update -d /vmfs/volumes/<datastore name>/ESXi670-{{ ansible_date_time.iso8601_basic_short }}.zip --profile=ESXi-6.7.0-20191204001-standard
+  shell: esxcli software profile update -d https://hostupdate.vmware.com/software/VUM/PRODUCTION/main/vmw-depot-index.xml -p ESXi-6.7.0-20191204001-standard
