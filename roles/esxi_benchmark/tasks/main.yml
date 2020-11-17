@@ -1,0 +1,10 @@
+---
+- include: software_profile_update.yml
+  tags: update
+
+- include: disable_snmp.yml
+  tags: snmp
+
+- include: reject_forged_transmit.yml
+  tags: forged
+...
