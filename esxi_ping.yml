@@ -1,6 +1,6 @@
 ---
-- name: Pinging all RHEL servers
-  hosts: platform_linux
+- name: Pinging all ESXi servers
+  hosts: platform_esxi
   
   tasks:
   - name: Testing connection
