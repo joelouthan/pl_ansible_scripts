@@ -7,4 +7,7 @@
 
 - include: reject_forged_transmit.yml
   tags: forged
+
+- include: enable_coredump.yml
+  tags: coredump
 ...
