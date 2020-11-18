@@ -1,7 +1,5 @@
 ---
 - include: disable_snmp.yml
 
-- include: reject_forged_transmit.yml
-
 - include: enable_coredump.yml
 ...
