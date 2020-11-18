@@ -1,0 +1,5 @@
+---
+- name: ansible_role_vwmare_esxi
+  src: https://plcorp.visualstudio.com/DefaultCollection/AnsiblePOC/_git/ansible_role_vmware_esxi
+  version: master
+...
