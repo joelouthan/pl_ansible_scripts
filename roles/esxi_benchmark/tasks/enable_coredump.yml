@@ -4,7 +4,7 @@
     Title: (L1) Ensure a centralized location is configured to collect ESXi host core dumps
     Description: The VMware vSphere Network Dump Collector service allows for collecting diagnostic information from a host that experiences a critical fault. This service provides a centralized location for collecting ESXi host core dumps.
     Rationale: When a host crashes, an analysis of the resultant core dump is essential to being able to identify the cause of the crash and determine a resolution. Installing a centralized dump collector helps ensure that core files are successfully saved and made available in the event an ESXi host should ever panic.
-  shell: esxcli system coredump network set -e true
+  shell: esxcli system coredump network get
   notify: Change Required
   tags: coredump
 ...

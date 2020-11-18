@@ -4,7 +4,7 @@
     Title: (L1) Ensure ESXi is properly patched
     Description: VMware Update Manager is a tool used to automate patch management for vSphere hosts and virtual machines. Creating a baseline for patches is a good way to ensure all hosts are at the same patch level. VMware also publishes advisories on security patches and offers a way to subscribe to email alerts for them.
     Rationale: By staying up to date on ESXi patches, vulnerabilities in the hypervisor can be mitigated. An educated attacker can exploit known vulnerabilities when attempting to attain access or elevate privileges on an ESXi host.
-  shell: esxcli software profile update -d https://hostupdate.vmware.com/software/VUM/PRODUCTION/main/vmw-depot-index.xml -p ESXi-6.7.0-20191204001-standard
+  shell: esxcli software profile update -d {{ vmware_esxi_update_depot_url }} -p {{ vwmare_esxi_update_profile }}
   notify: Change Required
   tags: update
 ...
