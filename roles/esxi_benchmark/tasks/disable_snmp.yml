@@ -6,4 +6,5 @@
     Rationale: If SNMP is not properly configured, monitoring data containing sensitive information can be sent to a malicious host and used to help exploit the host.
   shell: esxcli system snmp set --enable false
   notify: Change Required
+  tags: snmp
 ...
