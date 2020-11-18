@@ -7,4 +7,5 @@
   - name: Calling on esxi_benchmark role
     include_role: 
       name: ansible_role_vwmare_esxi
+    tags: always
 ...
