@@ -1,9 +1,0 @@
-# Variables are name in the following format:
-# inventoryname_platform_tagname_varname
-
-# Insert your depot and profile 
-vmware_esxi_update_depot_url:
-vwmare_esxi_update_profile:
-
-# Insert the name of your switch
-vmware_esxi_forged_switchname:

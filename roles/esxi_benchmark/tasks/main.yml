@@ -1,7 +1,0 @@
----
-- include: disable_snmp.yml
-
-- include: enable_coredump.yml
-
-- include: no_unauthorized_kernel_modules.yml
-...

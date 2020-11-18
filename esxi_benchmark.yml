@@ -6,5 +6,5 @@
   tasks:
   - name: Calling on esxi_benchmark role
     include_role: 
-      name: esxi_benchmark
+      name: ansible_role_vwmare_esxi
 ...
