@@ -1,0 +1,11 @@
+---
+- name: Sample - Benchmarking all ESXi servers
+  hosts: platform_esxi
+  gather_facts: true
+  
+  tasks:
+  - name: Calling on esxi_benchmark role
+    include_role: 
+      name: ansible_role_vwmare_esxi
+    tags: always
+...

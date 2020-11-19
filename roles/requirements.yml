@@ -1,0 +1,6 @@
+---
+- name: ansible_role_vwmare_esxi
+  src: git@ssh.dev.azure.com:v3/plcorp/AnsiblePOC/ansible_role_vmware_esxi
+  scm: git
+  version: master
+...
